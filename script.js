@@ -35,3 +35,16 @@ function btnEnable(event) {
   }
 }
 checkAgreement.addEventListener('change', btnEnable);
+
+const textarea = document.querySelector('#textarea');
+const counter = document.querySelector('#counter');
+function countTextArea(event) {
+  const limit = 500;
+  const { textLength } = event.target;
+  const rest = limit - textLength;
+  counter.textContent = rest;
+}
+window.onload = () => {
+  counter.textContent = 500;
+  textarea.addEventListener('input', countTextArea);
+};
