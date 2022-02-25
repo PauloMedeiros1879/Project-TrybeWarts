@@ -16,3 +16,12 @@
   flex-direction: column;
   margin: 25px;
 }
+
+.main {
+  display: flex;
+}
+
+#evaluation-form {
+  display: flex;
+  width: 675px;
+}
