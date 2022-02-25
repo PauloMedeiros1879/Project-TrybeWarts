@@ -17,7 +17,21 @@ function addRate() {
     radioRate.type = 'radio';
     radioRate.value = index;
     radioRate.name = 'rate';
+    const labelRate = document.createElement('label');
+    labelRate.innerText = index;
     divRate.appendChild(radioRate);
+    divRate.appendChild(labelRate);
   }
 }
 addRate();
+
+const btnSubmit = document.getElementById('submit-btn');
+const checkAgreement = document.getElementById('agreement');
+function btnEnable(event) {
+  if (event.target.checked) {
+    btnSubmit.removeAttribute('disabled');
+  } else {
+    btnSubmit.setAttribute('disabled', true);
+  }
+}
+checkAgreement.addEventListener('change', btnEnable);
