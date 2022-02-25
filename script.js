@@ -9,3 +9,17 @@ function validateFormLogin(event) {
   alert('Olá, Tryber!');
 }
 formLogin.addEventListener('submit', validateFormLogin);
+
+const divRate = document.querySelector('#rate');
+function addRate() {
+  for(let index = 1; index <= 10; index += 1) {
+    const radioRate = document.createElement('input')
+    radioRate.type = 'radio';
+    radioRate.value = index;
+    radioRate.name = 'rate';
+    divRate.appendChild(radioRate);
+  }
+  
+  
+}
+addRate();

@@ -35,9 +35,13 @@
         </div>
         
         <label id="label-family" for="">Qual sua família?</label>
-        <input type="radio" name="family" value="Frontend">
-         <input type="radio" name="family" value="Backend">
-        <input type="radio" name="family" value="FullStack">
+        <label for="frontend"> <input type="radio" name="family" value="Frontend" id="frontend"> 
+            Frontend</label>
+         <label for="backend"><input type="radio" name="family" value="Backend" id="backend"> 
+            Backend</label>
+        <label for="fullstack"><input type="radio" name="family" value="FullStack" id="fullstack"> 
+            FullStack</label>
+
         <label id="label-content">Qual conteúdo você está com mais vontade de aprender?</label>
             <label for="hofs">
                 <input name="content" class="subject" type="checkbox" value="HoFs" id="hofs">
@@ -57,6 +61,9 @@
             <label for="python">
                 <input name="content" class="subject" type="checkbox" value="Python" id="python">
                 Python</label>
+
+            
+            <div id="rate"><label for="" id="label-rate">Como você avalia a Trybewarts?</label></div> 
     </form>
     <img id="trybewarts-forms-logo" src="images/trybewarts-colored.svg" alt="brasão-trybe">
   </main>
