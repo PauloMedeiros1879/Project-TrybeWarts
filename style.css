@@ -9,3 +9,9 @@
   background-color: rgb(50, 167, 145);
   display: flex;
 }
+
+.header .trybewarts-login {
+  display: flex;
+  flex-direction: column;
+  margin: 25px;
+}
