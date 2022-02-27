@@ -57,7 +57,6 @@ function checkNameFromInputs(inputsReceived, type) {
   return inputsChecked;
 }
 
-const obsTextarea = document.querySelector('.textarea');
 const formUser = document.querySelector('#evaluation-form');
 function generateForm(user) {
   const { name, lastName, email, house, family, subject, evaluation } = user;
@@ -68,10 +67,11 @@ function generateForm(user) {
   formUser.innerHTML += (`<span class='newForm'>Família: ${family}</span>`);
   formUser.innerHTML += (`<span class='newForm'>Matérias: ${subject}</span>`);
   formUser.innerHTML += (`<span class='newForm'>Avaliação: ${evaluation}</span>`);
-  formUser.innerHTML += (`<span class='newForm'>Observações: ${obsTextarea.value}</span>`);
+  formUser.innerHTML += (`<span class='newForm'>Observações: ${textarea.value}</span>`);
 }
 
-function getInformation() {
+function getInformation(event) {
+  event.preventDefault();
   const user = {
     name: document.querySelector('#input-name'),
     lastName: document.querySelector('#input-lastname'),
