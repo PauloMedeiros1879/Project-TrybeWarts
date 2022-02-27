@@ -27,13 +27,13 @@
         <input type="text" id="input-email" placeholder="Email">
         <label for="house" class="house-label">Casa:</label>
                 <select name="house" id="house">
-                    <option id="gitnoria-house" value="Gitnória">Gitnória</option>
-                    <option id="reactpuff-house" value="Reactpuff">Reactpuff</option>
-                    <option id="corvinode-house" value="Corvinode">Corvinode</option>
-                    <option id="pytherina-house" value="Pytherina">Pytherina</option>
+                    <option id="gitnoria-house" class="option-house" value="Gitnória">Gitnória</option>
+                    <option id="reactpuff-house" class="option-house" value="Reactpuff">Reactpuff</option>
+                    <option id="corvinode-house" class="option-house" value="Corvinode">Corvinode</option>
+                    <option id="pytherina-house" class="option-house" value="Pytherina">Pytherina</option>
                 </select>
         </div>
-        
+        <div class="family">
         <label id="label-family" for="">Qual sua família?</label>
         <label for="frontend"> <input type="radio" name="family" value="Frontend" id="frontend"> 
             Frontend</label>
@@ -41,7 +41,8 @@
             Backend</label>
         <label for="fullstack"><input type="radio" name="family" value="FullStack" id="fullstack"> 
             FullStack</label>
-
+        </div>
+        <div class="content">
         <label id="label-content">Qual conteúdo você está com mais vontade de aprender?</label>
             <label for="hofs">
                 <input name="content" class="subject" type="checkbox" value="HoFs" id="hofs">
@@ -61,12 +62,14 @@
             <label for="python">
                 <input name="content" class="subject" type="checkbox" value="Python" id="python">
                 Python</label>
-
+        </div>
             
             <div id="rate"><label for="" id="label-rate">Como você avalia a Trybewarts?</label></div>
+        <div class="obs-textarea">
             <label for="textarea" class="textarea">Deixe seu comentário: </label>
                 <textarea name="observations" style="resize: none" id="textarea" maxlength="500" cols="30" rows="10"></textarea>
                 <span id="counter"></span> 
+        </div>
 
             <label id="label-infos" for="">Você concorda com o uso das informações acima? <input type="checkbox" name="" id="agreement"></label>
             <button id="submit-btn" type="submit" disabled>Enviar</button>    

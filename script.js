@@ -44,7 +44,48 @@ function countTextArea(event) {
   const rest = limit - textLength;
   counter.textContent = rest;
 }
+
+const inputs = document.querySelectorAll('input');
+function checkNameFromInputs(inputsReceived, type) {
+  let inputsChecked = [];
+  for (let i = 0; i < inputsReceived.length; i += 1) {
+    if (inputsReceived[i].name === type && inputsReceived[i].checked) {
+      inputsChecked.push(inputsReceived[i].value);
+    }
+  }
+  inputsChecked = inputsChecked.join(', ');
+  return inputsChecked;
+}
+
+const obsTextarea = document.querySelector('.textarea');
+const formUser = document.querySelector('#evaluation-form');
+function generateForm(user) {
+  const { name, lastName, email, house, family, subject, evaluation } = user;
+  formUser.innerHTML = '';
+  formUser.innerHTML += (`<span class='newForm'>Nome: ${name.value} ${lastName.value}</span>`);
+  formUser.innerHTML += (`<span class='newForm'>Email: ${email.value}</span>`);
+  formUser.innerHTML += (`<span class='newForm'>Casa: ${house.value}</span>`);
+  formUser.innerHTML += (`<span class='newForm'>Família: ${family}</span>`);
+  formUser.innerHTML += (`<span class='newForm'>Matérias: ${subject}</span>`);
+  formUser.innerHTML += (`<span class='newForm'>Avaliação: ${evaluation}</span>`);
+  formUser.innerHTML += (`<span class='newForm'>Observações: ${obsTextarea.value}</span>`);
+}
+
+function getInformation() {
+  const user = {
+    name: document.querySelector('#input-name'),
+    lastName: document.querySelector('#input-lastname'),
+    email: document.querySelector('#input-email'),
+    house: document.querySelector('#house'),
+    family: checkNameFromInputs(inputs, 'family'),
+    subject: checkNameFromInputs(inputs, 'content'),
+    evaluation: checkNameFromInputs(inputs, 'rate'),
+  };
+  generateForm(user);
+}
+
 window.onload = () => {
   counter.textContent = 500;
   textarea.addEventListener('input', countTextArea);
+  formUser.addEventListener('submit', getInformation);
 };
