@@ -32,7 +32,6 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  margin-top: 0 400px 0 0;
 }
 
 #email , #password , #login {
@@ -55,7 +54,7 @@ body {
 
 #container-imagem {
   position: relative;
-  height: 100vh;
+  height: 84vh;
   width: 100vw;
   background: url('images/hogwarts.jpg');
   background-size: cover;
